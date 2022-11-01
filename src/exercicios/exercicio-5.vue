@@ -9,6 +9,7 @@
         <div class="todos-container">
           <ul v-for="todo in todos" class="todos">
             <li>{{ todo }}</li>
+            <button @click="removeTodo(todo)">Remove</button>
           </ul>
         </div>
     </div>
@@ -28,6 +29,10 @@ export default {
     addTodo() {
       this.todos.push(this.inputValueTodo);
       this.inputValueTodo = ''
+    },
+    removeTodo(item) {
+      const filteredTodos = this.todos.filter(todo => todo !== item);
+      this.todos = filteredTodos;
     },
   },
 };

@@ -1,14 +1,35 @@
 <template>
-  <div class="bg">Espaço para implementar o componente do Exercício 5</div>
+  <div class="bg">
+    Espaço para implementar o componente do Exercício 5
+    <div>
+       <div class="input-container">
+          <input type="text" v-model="inputValueTodo" placeholder="Insira um todo"/>
+          <button @click="addTodo">Add</button>
+        </div>
+        <div class="todos-container">
+          <ul v-for="todo in todos" class="todos">
+            <li>{{ todo }}</li>
+          </ul>
+        </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "ExercicioCinco",
   data() {
-    return {};
+    return {
+      inputValueTodo: "",
+      todos: [],
+    };
   },
-  methods: {},
+  methods: {
+    addTodo() {
+      this.todos.push(this.inputValueTodo);
+      this.inputValueTodo = ''
+    },
+  },
 };
 </script>
 
@@ -17,5 +38,9 @@ export default {
 .bg {
   background-color: #eee;
   padding: 64px 32px;
+}
+
+.todos {
+  list-style: none;
 }
 </style>

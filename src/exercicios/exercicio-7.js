@@ -3,6 +3,9 @@
 // retorna false se a palavra não foi localizada no texto
 
 export const verificaPalavraNoTexto = (texto, palavra) => {
+  if (!texto && !palavra) {
+    return "informe um texto e uma palavra";
+  }
   if (!texto) {
     return "informe um texto";
   }

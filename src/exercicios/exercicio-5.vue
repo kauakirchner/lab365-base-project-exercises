@@ -7,7 +7,7 @@
           <button @click="addTodo">Add</button>
         </div>
         <div class="todos-container">
-          <ul v-for="todo in todos" class="todos">
+          <ul v-for="(todo, index) in todos" :key="index" class="todos">
             <li>{{ todo }}</li>
             <button @click="removeTodo(todo)">Remove</button>
           </ul>
@@ -23,6 +23,7 @@ export default {
     return {
       inputValueTodo: "",
       todos: [],
+      array: [3, 8, 10, 1, 5, 4, 2]
     };
   },
   methods: {

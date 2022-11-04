@@ -4,10 +4,10 @@ import ExercicioExemplo from "@/exercicios/exercicio-exemplo.vue";
 describe("HelloWorld.vue", () => {
   it("renderiza props.nome quando informada", () => {
     const wrapper = shallowMount(ExercicioExemplo, {
-      propsData: { nome: "Matheus" },
+      propsData: { nome: "Kauã" },
     });
 
-    expect(wrapper.text()).toMatch("Matheus");
+    expect(wrapper.text()).toMatch("Kauã");
   });
 
   it("renderiza o valor padrão quando não há props.nome", () => {

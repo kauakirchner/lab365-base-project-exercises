@@ -23,7 +23,7 @@
 
       <h3 v-if="foiAprovado">Parabéns! Você foi aprovado</h3>
       <h3 v-else-if="estaEmExame">
-        Quase! Você está em exame mas ainda tem chaneces
+        Quase! Você está em exame mas ainda tem chances
       </h3>
       <h3 v-else-if="foiReprovado">Poxa, infelizmente você reprovou</h3>
     </div>
